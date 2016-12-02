@@ -2,11 +2,11 @@
   "name": "jquery-touch-events",
   "description": "A mobile events plugin for jQuery",
   "contributors": [
-    {"name": "Sam Delgado", "email": "<sam@samdelgado.com>", "url": "http://offcolorapp.com"},
+    {"name": "Sam Delgado", "email": "<sam@samdelgado.com>", "url": "https://rizerapp.com"},
     {"name": "hachigoro", "url": "https://github.com/hachigoro"},
     {"name": "Ben Major", "url": "http://www.ben-major.co.uk"}
   ],
-  "version": "1.0.3",
+  "version": "1.0.6",
   "main": "index.js",
   "keywords": [
     "jquery",

@@ -1,7 +1,7 @@
 # jQuery Touch Events
 
 
-This jQuery plugin provides additional touch events that can be used when developing for mobile devices. The events are also compatible with desktop browsers to ensure ultimate compatibility for your projects.
+This jQuery plugin provides additional touch events that can be used when developing for mobile devices. The events are also compatible with desktop browsers to ensure ultimate compatibility for your projects. This plugin was created by Ben Major, but I have tweaked it to be compatible with browserify, allowing you to "require" it in your app.
 
 As explained, the events are each triggered by native touch events, or alternatively by click events. The plugin automatically detects whether the user's device is touch compatible, and will use the correct native events whenever required. It is hoped that these events will help to aid single-environment development with jQuery for mobile web app development.
 
@@ -26,26 +26,26 @@ require('jquery-touch-events');
 ```
 
 ### 2. Usage:
-All of the events outlined above have been written using jQuery's ``event.special`` object, and so can be used in conjunction with jQuery's event handling functions, as well as shortcut wrappers. As a result, all of the events that are supported by this library may be handled using any of jQuery's own event-specific methods, such as `bind()`, `on()`, `live()` (for legacy) and `one()`. 
+All of the events outlined above have been written using jQuery's ``event.special`` object, and so can be used in conjunction with jQuery's event handling functions, as well as shortcut wrappers. As a result, all of the events that are supported by this library may be handled using any of jQuery's own event-specific methods, such as `bind()`, `on()`, `live()` (for legacy) and `one()`.
 
 The following code snippets showcase some basic usage with jQuery:
 
 **Binding a ``tap`` event to an element:**  
 ```
-$('#myElement').bind('tap', function(e) { 
-    console.log('User tapped #myElement'); 
+$('#myElement').bind('tap', function(e) {
+    console.log('User tapped #myElement');
 });
 ```
 
 **Using with ``.on()`` and ``.live()``:**  
 ```
-$('#myElement').live('tap', function(e) { 
-    console.log('User tapped #myElement'); 
+$('#myElement').live('tap', function(e) {
+    console.log('User tapped #myElement');
 });
 ```  
 ```
-$('#myElement').on('tap', function(e) { 
-    console.log('User tapped #myElement'); 
+$('#myElement').on('tap', function(e) {
+    console.log('User tapped #myElement');
 });
 ```
 
@@ -67,18 +67,18 @@ $('#myElement').unbind('tap', hander);
 
 **Using method wrapper:**  
 ```
-$('#myElement').tap(function(e) { 
-    console.log('User tapped #myElement'); 
+$('#myElement').tap(function(e) {
+    console.log('User tapped #myElement');
 });
 ```
 
 **Method chaining:**  
 Chaining has also been preserved, so you can easily use these events in conjuction with other jQuery functions, or attach multiple events in a single, chained LOC:  
 ```
-$('#myElement').tap(function() { 
+$('#myElement').tap(function() {
     console.log('tap');
-}).hold(function() { 
-    console.log('hold'); 
+}).hold(function() {
+    console.log('hold');
 });
 ```
 
@@ -106,7 +106,7 @@ Similar to ``swipe``, but triggered only when the user swipes their finger top t
 + **`swipeleft`**  
 Similar to ``swipe``, but triggered only when the user swipes their finger from right to left.
 + **`swipeend`**  
-The ``swipeend`` event is trigged whenever a swipe event ends (i.e. the user finished moving their finger / cursor and released it). This event should be used to handle custom functions, since it will be triggered only when the swipe ends, rather than triggering immediately when the threshold has been met. 
+The ``swipeend`` event is trigged whenever a swipe event ends (i.e. the user finished moving their finger / cursor and released it). This event should be used to handle custom functions, since it will be triggered only when the swipe ends, rather than triggering immediately when the threshold has been met.
 + **`scrollstart`**  
 Triggered as soon as scrolling begins on the target element.
 + **`scrollend`**  
@@ -150,7 +150,7 @@ Each event provides different callback data. The following shows the numerous da
 
 `startPosition` - object containing the X and Y positions of the start event (i.e. when the user pressed their finger or mouse) relative to the screen. Accessed through `endPosition.x` and `endPosition.y` respectively.
 
-`startTime` - JavaScript timestamp the `hold` started (milliseconds since the Unix Epoch). 
+`startTime` - JavaScript timestamp the `hold` started (milliseconds since the Unix Epoch).
 
 `target` - the jQuery object from which the event was triggered.
 
@@ -174,7 +174,7 @@ You can also define custom thresholds to be used for ``swipe`` events (``swipeup
 
 ``<div id="mySwiper" data-xthreshold="500"></div>``
 
-The value you define is the difference in pixels that the user must move before the event is triggered on the target element. If no threshold is defined, a default of `50px` will be used. 
+The value you define is the difference in pixels that the user must move before the event is triggered on the target element. If no threshold is defined, a default of `50px` will be used.
 
 ``data-xthreshold`` defines the horizontal threshold.
 
