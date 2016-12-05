@@ -6,7 +6,7 @@
     {"name": "hachigoro", "url": "https://github.com/hachigoro"},
     {"name": "Ben Major", "url": "http://www.ben-major.co.uk"}
   ],
-  "version": "1.0.6",
+  "version": "1.0.7",
   "main": "index.js",
   "keywords": [
     "jquery",

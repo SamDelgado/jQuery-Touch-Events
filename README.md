@@ -18,11 +18,12 @@ As explained, the events are each triggered by native touch events, or alternati
 ## 1. Installation:
 
 
-jQuery Touch Events, as the name suggests, requires only the jQuery library (version 1.7+) to run. Simply require 'jquery-touch-events' after jQuery has been loaded.
+jQuery Touch Events, as the name suggests, requires only the jQuery library (version 1.7+) to run. Simply require and run 'jquery-touch-events' after jQuery has been loaded.
 
 ```
-global.$ = require('jquery');
-require('jquery-touch-events');
+var $ = require('jquery');
+var loadTouchEvents = require('jquery-touch-events');
+loadTouchEvents($);
 ```
 
 ### 2. Usage:
